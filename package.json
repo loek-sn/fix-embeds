@@ -1,0 +1,21 @@
+{
+  "name": "fix-embeds",
+  "module": "index.ts",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "dev": "bun --watch ./src/index.ts",
+    "register": "bun run ./src/scripts/register.ts",
+    "build": "bun build ./src/index.ts --compile --outfile ./dist/fixEmbeds"
+  },
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  },
+  "dependencies": {
+    "discord.js": "^14.19.3",
+    "zod": "^3.25.36"
+  }
+}
