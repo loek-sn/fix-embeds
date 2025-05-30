@@ -1,7 +1,7 @@
 import { SlashCommandBuilder, type Interaction } from "discord.js";
 import { replaceLink } from "../lib/fix/replaceLink";
 import type { CommandInterface } from "./commandInterface";
-import { int, z } from "zod/v4";
+import { z } from "zod/v4";
 
 const inputSchema = z.url()
 
@@ -38,7 +38,7 @@ export const command = {
                 return;
             }
 
-            await interaction.reply(`Fixed link: ${fixedLink}`);
+            await interaction.reply(fixedLink)
             return;
         }
     }
