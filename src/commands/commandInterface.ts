@@ -1,6 +1,12 @@
-import type { Interaction, RESTPostAPIChatInputApplicationCommandsJSONBody } from "discord.js";
+import type {
+  ChatInputCommandInteraction,
+  RESTPostAPIChatInputApplicationCommandsJSONBody,
+  RESTPostAPIContextMenuApplicationCommandsJSONBody,
+} from 'discord.js';
 
 export interface CommandInterface {
-    data: RESTPostAPIChatInputApplicationCommandsJSONBody
-    handler: (interaction: Interaction) => Promise<void>;
+  data:
+    | RESTPostAPIChatInputApplicationCommandsJSONBody
+    | RESTPostAPIContextMenuApplicationCommandsJSONBody;
+  handler: (interaction: ChatInputCommandInteraction) => Promise<void>;
 }
