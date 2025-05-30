@@ -1,4 +1,4 @@
-import type { Interaction } from "discord.js";
+import { MessageFlags, type Interaction } from "discord.js";
 import { command } from "../commands/fix.command";
 
 export async function fixHandler(interaction: Interaction) {
@@ -21,7 +21,7 @@ export async function fixHandler(interaction: Interaction) {
       if (!interaction.replied && !interaction.deferred) {
         await interaction.reply({
           content: 'An error occurred while processing the command.',
-          ephemeral: true,
+          flags: [MessageFlags.Ephemeral],
         });
       }
     }
@@ -29,7 +29,7 @@ export async function fixHandler(interaction: Interaction) {
     console.log('Unknown command:', interaction.commandName);
     await interaction.reply({
       content: 'Unknown command.',
-      ephemeral: true,
+      flags: [MessageFlags.Ephemeral],
     });
   }
 }
