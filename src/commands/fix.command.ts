@@ -5,9 +5,9 @@ import {
 } from 'discord.js';
 import { replaceLink } from '../lib/fix/replaceLink';
 import type { CommandInterface } from './commandInterface';
-import { z } from 'zod';
+import { z } from 'zod/v4-mini';
 
-const inputSchema = z.string().url();
+const inputSchema = z.url();
 
 export const command: CommandInterface = {
   data: {
