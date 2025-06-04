@@ -1,0 +1,3 @@
+name = "fix-embeds-bot"
+compatibility_date = "2025-06-04"
+main = "src/index.ts"
