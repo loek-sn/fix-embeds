@@ -9,7 +9,8 @@
     "build": "bun build ./src/index.ts --compile --outfile ./dist/fixEmbeds"
   },
   "devDependencies": {
-    "@types/bun": "latest"
+    "@types/bun": "latest",
+    "wrangler": "^4.18.0"
   },
   "peerDependencies": {
     "typescript": "^5"
